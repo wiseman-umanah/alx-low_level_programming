@@ -9,11 +9,11 @@
 int main(void)
 {
 	int i;
-	char alpha[26];
+	char alpha[27];
 
-	alpha = "abcdefghijklmnopqrstuvwxyz";
+	strcpy(alpha, "abcdefghijklmnopqrstuvwxyz");
 	for (i = 0; i < 26; i++)
 		putchar(alpha[i]);
-	putchar("\n");
+	putchar('\n');
 	return (0);
 }
