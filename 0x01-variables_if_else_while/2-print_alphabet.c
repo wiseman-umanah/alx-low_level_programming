@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <string.h>
 
 /**
 * main - Entry point
@@ -9,11 +8,9 @@
 int main(void)
 {
 	int i;
-	char alpha[27];
 
-	strcpy(alpha, "abcdefghijklmnopqrstuvwxyz");
-	for (i = 0; i < 26; i++)
-		putchar(alpha[i]);
+	for (i = 'a'; i < 'z'; i++)
+		putchar(i);
 	putchar('\n');
 	return (0);
 }
