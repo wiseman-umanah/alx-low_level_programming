@@ -13,11 +13,9 @@ int main(void) {
     return 0;
 }
 
-void print_alphabet(void)
-{
-	int i;
-
-	for (i = 97; i <= 122; i++)
-		_putchar(i);
-	_putchar('\n');
+void print_alphabet(void) {
+    for (char c = 'a'; c <= 'z'; c++) {
+        _putchar(c);
+    }
+    _putchar('\n');  // Add a newline after printing the alphabets
 }
