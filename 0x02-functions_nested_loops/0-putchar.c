@@ -1,16 +1,20 @@
 #include "main.h"
+
 /**
- *print_alphabet - abcd
- *Description: print lowercase alphabet
- *Return: void.
- */
-void print_alphabet(void)
+* main - Entry point
+*
+* Return: Always 0
+*/
+int main(void)
 {
-char alphabet[26] = "abcdefghijklmnopqrstuvwxyz";
-int i;
-for (i = 0; i < 26; i++)
-{
-_putchar(alphabet[i]);
-}
-_putchar('\n');
+	_putchar('_');
+	_putchar('p');
+	_putchar('u');
+	_putchar('t');
+	_putchar('c');
+	_putchar('h');
+	_putchar('a');
+	_putchar('r');
+	_putchar('\n');
+	return (0);
 }
