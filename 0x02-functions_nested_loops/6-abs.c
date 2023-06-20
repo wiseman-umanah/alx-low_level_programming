@@ -1,14 +1,24 @@
-#include <stdlib.h>
 #include "main.h"
-
 /**
-* _abs -prints absolute value
-*
-* @e: paramater
-*
-* Return: will be 0 in main function
-*/
-int _abs(int e)
+ *_abs - absolute value of a number.
+ *@n: input.
+ *
+ *Return: absolute value
+ *
+ */
+int _abs(int n)
 {
-	printf("%d", abs(e));
+if (n > 0)
+{
+n = n * 1;
+}
+if (n == 0)
+{
+n = 0;
+}
+if (n < 0)
+{
+n = n * -1;
+}
+return (n);
 }
