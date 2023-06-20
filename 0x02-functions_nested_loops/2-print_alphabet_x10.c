@@ -1,17 +1,24 @@
 #include "main.h"
-
 /**
-* print_alphabet_x10 - prints alphabets x10
-*
-* Return: always 0
-*/
+ *print_alphabet_x10 - print alpha x10
+ *@void: no arguments.
+ *
+ *Return: no return value.
+ */
 void print_alphabet_x10(void)
 {
-	int i;
-	char j;
-
-	for (i = 0, i <= 10; i++)
-		for (j = 'a'; j <= 'z'; j++)
-			_putchar(j);
-	_putchar('\n');
+char alphabet[26] = "abcdefghijklmnopqrstuvwxyz";
+int i, j;
+i = 0;
+while (i < 10)
+{
+j = 0;
+while (j < 26)
+{
+_putchar(alphabet[j]);
+j++;
+}
+_putchar('\n');
+i++;
+}
 }
