@@ -2,10 +2,9 @@
 
 /**
 * print_square - prints a square using #, with size n
-*
 * @size: size of square
 *
-* Return: is 0 in main function
+* Return: void
 */
 void print_square(int size)
 {
