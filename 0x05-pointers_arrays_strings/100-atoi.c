@@ -12,13 +12,23 @@
 
 int _atoi(char *s)
 {
-	char *endptr;
 	int num;
+	int sign;
 
+	num = 0;
+	sign = 1;
 	while (*s && !isdigit(*s))
 	{
+		if (*s == '-')
+		{
+			sign = -1;
+		}
 		s++;
 	}
-	num = strtol(s, &endptr, 10);
-	return (num);
+	while (*s && isdigit(*s))
+	{
+		num = num * 10 + (*s - '0');
+		s++
+	}
+	return (sign * num);
 }
