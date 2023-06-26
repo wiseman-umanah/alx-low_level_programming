@@ -15,6 +15,10 @@ int _atoi(char *s)
 	char *endptr;
 	int num;
 
+	while (*s && !isdigit(*s))
+	{
+		s++;
+	}
 	num = strtol(s, &endptr, 10);
 	return (num);
 }
