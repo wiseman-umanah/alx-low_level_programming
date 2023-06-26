@@ -1,6 +1,5 @@
 #include "main.h"
 #include <ctype.h>
-#include <stdlib.h>
 
 /**
 * _atoi - extracts integers from string
@@ -28,7 +27,7 @@ int _atoi(char *s)
 	while (*s && isdigit(*s))
 	{
 		num = num * 10 + (*s - '0');
-		s++
+		s++;
 	}
 	return (sign * num);
 }
