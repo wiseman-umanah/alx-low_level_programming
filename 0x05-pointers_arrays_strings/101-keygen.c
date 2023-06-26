@@ -10,12 +10,17 @@
 int main(void)
 {
 	int i;
+	int j;
 
 	srand(time(NULL));
 
 	for (i = 0; i <= 10; i++)
 	{
-		printf("%d\n", rand() % 28379 + 1);
+		for (j = 0; j <= 10; j++)
+		{
+			printf("%c", rand() % 2345 + 1);
+		}
+		printf("\n");
 	}
 	return (0);
 }
