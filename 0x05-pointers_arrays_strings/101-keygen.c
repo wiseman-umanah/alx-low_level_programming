@@ -15,7 +15,7 @@ int main(void)
 
 	for (i = 0; i <= 10; i++)
 	{
-		prinf("%d\n", rand() % 28379 + 1);
+		printf("%d\n", rand() % 28379 + 1);
 	}
 	return (0);
 }
