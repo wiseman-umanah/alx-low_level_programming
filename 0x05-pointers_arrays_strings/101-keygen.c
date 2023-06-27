@@ -9,33 +9,17 @@
 */
 int main(void)
 {
-    int i;
-    int length = 10;
-    char password[length + 1];
+	int i;
+	int j;
 
-    srand(time(NULL));
+	srand(time(NULL));
 
-    for (i = 0; i < length; i++)
-    {
-        int random = rand() % 3;
-
-        if (random == 0)
-        {
-            password[i] = 'A' + rand() % 26;
-        }
-        else if (random == 1)
-        {
-            password[i] = 'a' + rand() % 26;
-        }
-        else
-        {
-            password[i] = '0' + rand() % 10;
-        }
-    }
-
-    password[length] = '\0';
-
-    printf("Generated password: %s\n", password);
-
-    return (0);
+	for (i = 0; i <= 10; i++)
+	{
+		for (j = 0; j <= 10; j++)
+		{
+			printf("%c", rand() % 2345 + 1);
+		}
+	}
+	return (0);
 }
