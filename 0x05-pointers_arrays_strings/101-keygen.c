@@ -20,7 +20,6 @@ int main(void)
 		{
 			printf("%c", rand() % 2345 + 1);
 		}
-		printf("\n");
 	}
 	return (0);
 }
