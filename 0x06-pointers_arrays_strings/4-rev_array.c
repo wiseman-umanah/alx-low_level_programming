@@ -1,25 +1,36 @@
 #include "main.h"
 
+/**
+* reverse_array - reverses an array
+*
+* @a: The array
+* @n: paramter
+*/
+
 void reverse_array(int *a, int n)
 {
-	int b[n];
 	int i;
 	int j;
+	int b[900];
 
-	j = n - 1;
+	j = 0;
+	for (i = (n - 1); i >= 0; i--)
+	{
+		b[j] = a[i];
+		j++;
+	}
 	for (i = 0; i < n; i++)
 	{
-		b[i] = a[j];
-		if ( i == (n - 1))
+		a[i] = b[i];
+		if (i == (n - 1))
 		{
-			_putchar(b[i]);
+			_putchar(a[i]);
 		}
 		else
 		{
-			_putchar(b[i]);
+			_putchar(a[i]);
 			_putchar(',');
 			_putchar(' ');
 		}
-		j--;
 	}
 }
