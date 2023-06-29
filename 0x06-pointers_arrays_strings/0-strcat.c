@@ -12,8 +12,5 @@
 
 char *_strcat(char *dest, char *src)
 {
-	char cp[1000];
-
-	cp = strcat(dest, src);
-	return (cp);
+	return strcat(dest, src);
 }
