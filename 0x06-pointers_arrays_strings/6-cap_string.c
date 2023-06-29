@@ -16,23 +16,7 @@ char *cap_string(char *str)
 	i = 0;
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		if (i == 0 || s[i - 1] == ' ' || s[i - 1] == '\t')
-		{
-			str[i] = toupper(str[i]);
-		}
-		else if (s[i - 1] == '\n' || s[i - 1] == ',' || s[i - 1] == ';')
-		{
-			str[i] = toupper(str[i]);
-		}
-		else if (s[i - 1] == '{' || s[i - 1] == '}')
-		{
-			str[i] = toupper(str[i]);
-		}
-		else if (s[i - 1] == '.' || s[i - 1] == '!' || s[i - 1] == '?')
-		{
-			str[i] = toupper(str[i]);
-		}
-		else if (s[i - 1] == '"' || s[i - 1] == '(' || s[i - 1] == ')')
+		if (i == 0 || !isalpha(str[i - 1]))
 		{
 			str[i] = toupper(str[i]);
 		}
