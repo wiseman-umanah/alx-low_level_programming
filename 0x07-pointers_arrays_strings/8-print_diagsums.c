@@ -11,7 +11,7 @@
 void print_diagsums(int *a, int size)
 {
 	int i;
-	long int sum;
+	int sum;
 
 	sum = 0;
 	for (i = 0; i < (size * size); i += (size + 1))
@@ -20,6 +20,7 @@ void print_diagsums(int *a, int size)
 	}
 	_putchar(sum);
 	_putchar(',');
+	_putchar(' ');
 	sum = 0;
 	for (i = (size - 1); i < ((size * size) - (size - 1)); i += (size - 1))
 	{
