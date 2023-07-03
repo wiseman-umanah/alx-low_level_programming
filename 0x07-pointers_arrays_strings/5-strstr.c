@@ -1,19 +1,31 @@
 #include "main.h"
-
 /**
+* _strstr - locates a substring.
+* @haystack: pointer to string.
+* @needle: pointer to substring.
+*
+* Return: pointer to beginning of located string
 */
 
 char *_strstr(char *haystack, char *needle)
 {
-	int len;
-	char substr[100];
-	int i;
-	int j;
-
-	len = strlen(needle);
-	for (i = 0; i < strlen(haystack); i++)
+	while (*haystack)
 	{
-		for (j = i; j < (i +len); j++)
-		{
-			substr[j - i] = haystack[i];
+		char *hayptr = haystack;
+		char *neptr = needle;
 
+		while (*neptr && *haystack && *haystack == *neptr)
+		{
+			haystack++;
+			neptr++;
+		}
+
+		if (!*neptr)
+		{
+			return (hayptr);
+		}
+
+		haystack = hayptr + 1;
+	}
+	return (0);
+}
