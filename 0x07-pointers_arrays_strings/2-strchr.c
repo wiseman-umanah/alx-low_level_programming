@@ -12,7 +12,7 @@
 
 char *_strchr(char *s, char c)
 {
-	char *str;
+	char *str = NULL;
 	int i;
 
 	i = 0;
@@ -22,10 +22,6 @@ char *_strchr(char *s, char c)
 		{
 			str = &s[i];
 			break;
-		}
-		else
-		{
-			str = NULL;
 		}
 		i++;
 	}
