@@ -9,11 +9,5 @@
 
 void _puts_recursion(char *s)
 {
-	size_t i;
-
-	for (i = 0; i < strlen(s); i++)
-	{
-		putchar(s[i]);
-	}
-	putchar('\n');
+	puts(s);
 }
