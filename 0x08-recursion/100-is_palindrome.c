@@ -9,13 +9,26 @@
 
 int is_palindrome(char *s)
 {
-	char ptr[300];
+	int len = strlen(s);
 
-	strcpy(ptr, s);
-	strrev(ptr);
+	return (is_palindrome(s, 0, len - 1));
+}
 
-	if (strcmp(ptr, s) == 0)
+/**
+* checker - checks if reverse string is same as string
+*
+* @s: string
+* @start: iterate
+* @end: iterate
+*
+* Return: 1 if true, 0 if not true
+*/
+
+int checker(char *s, int start, int end)
+{
+	if (start >= end)
 		return (1);
-	else
+	if (s[start] != s[end])
 		return (0);
+	return (checker(s, start + 1, end - 1));
 }
