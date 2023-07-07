@@ -1,30 +1,21 @@
-# 0x08-recursion
+```MANDATORY ```
 
-``` MANDATORY ```
+# 0x0A-argc_argv
+The argument count and argument vector.
+## 0-whatsmyname.c
+> A program that prints its name followed by a new line.
+## 1-args.c
+> A program that prints the number of arguments passed into it followed by a new line.
+## 2-args.c
+> A program that prints all arguments it receives.
+## 3-mul.c
+> A program that multiplies 2 numbers, prints the result follwed by a new line. 
+> - Assumes that the two numbers and the result of multiplication can be stored in an integer.
+> - If two arguments are not passed,, the program prints ``` Error ``` followed by a new line and return ``` 1 ```.
+## 4-add.c
+> A program that adds positive numbers and prints the result followed by a new line.
 
-## 0-puts_recursion.c
-> A function that prints a string followed by a new line.
-## 1-print_rev_recursion.c
-> A function that prints a string in reverse.
-main## 2-strlen_recursion.c
-> A function that returns the length of a string.
-## 3-factorial.c
-> A function that returns the factorial of a given number.
-## 4-pow_recursion.c
-> A function that returns the value of ``` x ``` raised to the power of ``` y ```.
-## 5-sqrt_recursion.c
-> A function that returns the natural square root of a number.
-## 6-is_prime_number.c
-> A function that returns ``` 1 ``` if ``` n ``` is a [prime number]
+```ADVANCED ```
 
-``` ADVANCED ```
-
-## 100-is_palindrome.c
-> A function that returns ``` 1 ``` id a string is a palindrome and ``` 0 ``` if not.
-## 100-wildcmp.c
->  A function that compares two strings and returns ``` 1 ``` if the strings can be considered identical, otherwise returns ``` 0 ```.
-
-``` HEADER FILE ```
-
-## main.h
-> Header file that contains all prototypes of functions used in this project.
+## 100-change.c
+>  A program that prints the minimum number of coins to make change for an amount of money.
