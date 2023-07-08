@@ -18,7 +18,6 @@ int main(int argc, char *argv[])
 	int sum;
 
 	sum = 0;
-	j = 0;
 	if (argc == 0)
 	{
 		printf("%d\n", sum);
