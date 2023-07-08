@@ -14,9 +14,11 @@
 int main(int argc, char *argv[])
 {
 	int i;
+	int j;
 	int sum;
 
 	sum = 0;
+	j = 0;
 	if (argc == 0)
 	{
 		printf("%d\n", sum);
@@ -25,18 +27,21 @@ int main(int argc, char *argv[])
 	{
 		for (i = 1; i < argc; i++)
 		{
-			if (isdigit(argv[i][0]))
+			for (j = 0; argv[i][j] != '\0'; j++)
 			{
-				sum += atoi(argv[i]);
-			}
-			else
-			{
-				puts("Error");
-				return (1);
+				if (isdigit(argv[i][j]))
+				{
+					sum += atoi(argv[i]);
+
+				}
+				else
+				{
+					puts("Error");
+					return (1);
+				}
 			}
 		}
-		
+		printf("%d\n",sum);
 	}
-	printf("%d\n", sum);
 	return (0);
 }
