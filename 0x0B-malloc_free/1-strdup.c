@@ -4,14 +4,14 @@
 #include <stdlib.h>
 
 /**
-* _strup - duplicates a string and returns a pointer to the new string
+* _strdup - duplicates a string and returns a pointer to the new string
 *
 * @str: the string to be duplicated
 *
 * Return: new string if suucess, NULL if failed
 */
 
-char *_strup(char *str)
+char *_strdup(char *str)
 {
 	char *spt;
 
