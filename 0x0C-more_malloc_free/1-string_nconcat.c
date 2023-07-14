@@ -32,7 +32,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		i++;
 	}
 	tlen2 = tlen + n + 1;
-	ptr = malloc(tlen2 * sizeof(char));
+	ptr = malloc(tlen2 * sizeof(*ptr));
 	if (ptr == NULL)
 		return (NULL);
 	i = 0;
