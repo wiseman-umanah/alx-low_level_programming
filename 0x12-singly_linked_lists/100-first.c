@@ -2,7 +2,7 @@
 
 /**
 * print - prints before the main function
-* Return: void 
+* Return: void
 */
 
 void print(void)
