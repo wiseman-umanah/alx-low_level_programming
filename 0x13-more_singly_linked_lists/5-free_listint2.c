@@ -6,15 +6,17 @@
 * @head: head pointer of linked list
 * Return: void
 */
+
 void free_listint2(listint_t **head)
 {
-        listint_t *temp;
+	listint_t *new, *temp;
 
-        while (head != NULL)
-        {
-                temp = *head;
-                *head = temp->next;
-                free(temp);
-                free(head);
-        }
+	new = *head;
+	while (new != NULL)
+	{
+		temp = new;
+		new = new->next;
+		free(temp);
+	}
+	*head = NULL;
 }
