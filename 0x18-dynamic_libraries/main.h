@@ -1,4 +1,11 @@
+#ifndef MAIN_H
+#define MAIN_H
+
+
 #include <stdio.h>
+#include <stddef.h>
+#include <stdlib.h>
+#include <unistd.h>
 int _abs(int n);
 int _atoi(char *s);
 int _isalpha(int c);
@@ -19,3 +26,5 @@ char *_strncpy(char *dest, char *src, int n);
 char *_strpbrk(char *s, char *accept);
 unsigned int _strspn(char *s, char *accept);
 char *_strstr(char *haystack, char *needle);
+
+#endif /*MAIN_H*/
