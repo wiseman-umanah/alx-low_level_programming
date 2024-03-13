@@ -1,25 +1,52 @@
 #include "search_algos.h"
 
 /**
-  * pretty_print - navigates the array values
-  * @array: the array
-  * @size: the size of the array
-  * Return: nothing
+ * pretty_print - prints array in specific order
+ * @array: the array size
+ * @start: The start of the array
+ * @end: The end of the array
+ * Return: none
 */
 
-void pretty_print(int *array, size_t size)
-{
-	size_t i;
-	
-	for (i = 0; i < size; i++)
+void pretty_print(int *array, size_t start, size_t end)
+{	
+	printf("Searching in array:");
+	for (; start <= end; start++)
 	{
-		if (i == size - 1)
-			printf(" %d\n", array[i]);
+		if (start == end)
+			printf(" %d\n", array[start]);
 		else
-			printf(" %d,", array[i]);
+			printf(" %d,", array[start]);
 	}
 }
 
+
+/**
+ * binarySearch - Binary Search Algorithm
+ * @array: the array to use
+ * @start: the start of the array
+ * @end: the end of the array
+ * @value: The value to find
+ * Return: -1 not found, index for found
+*/
+
+int binarySearch(int *array, int start, int end, int value)
+{
+	size_t mid;
+
+	if (end >= start)
+	{
+		pretty_print(array, start, end);
+		mid = (start + end) / 2;
+		if(array[mid] == value)        
+			return mid;
+		else if(array[mid] < value)
+			return binarySearch(array, mid+1, end, value);
+		else
+			return binarySearch(array, start, mid-1, value);
+	}
+	return -1;
+}
 
 /**
   * binary_search - Binary Search Algorithm
@@ -33,20 +60,9 @@ void pretty_print(int *array, size_t size)
 
 int binary_search(int *array, size_t size, int value)
 {
-	size_t i, mid;
-
-	for (i = 0; i < size;)
-	{
-		printf("Searching in array:");
-		pretty_print(array, size);
-        mid = i + (size - i) / 2;
-		if (value == array[mid])
-			return (mid);
-		if (value < array[mid])
-			size = mid - 1;
-		else if (value > array[mid])
-			i = mid + 1;
-	}
-	return (-1);
+	if (array == NULL)
+		return (-1);
+	if (array[0] == value)
+		return (0);
+	return (binarySearch(array, 0, size - 1, value));
 }
-
