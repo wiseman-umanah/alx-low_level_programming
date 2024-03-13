@@ -9,7 +9,7 @@
 */
 
 void pretty_print(int *array, size_t start, size_t end)
-{	
+{
 	printf("Searching in array:");
 	for (; start <= end; start++)
 	{
@@ -38,14 +38,14 @@ int binarySearch(int *array, int start, int end, int value)
 	{
 		pretty_print(array, start, end);
 		mid = (start + end) / 2;
-		if(array[mid] == value)        
-			return mid;
-		else if(array[mid] < value)
-			return binarySearch(array, mid+1, end, value);
+		if (array[mid] == value)
+			return (mid);
+		else if (array[mid] < value)
+			return (binarySearch(array, mid + 1, end, value));
 		else
-			return binarySearch(array, start, mid-1, value);
+			return (binarySearch(array, start, mid - 1, value));
 	}
-	return -1;
+	return (-1);
 }
 
 /**
