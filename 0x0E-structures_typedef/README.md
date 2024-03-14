@@ -1,23 +1,7 @@
-# 0x0E-structures_typedef
+## STRUCTURES
 
-## dog.h
-> Contains function prototypes, typedef and struct declarations.
-
-## 1-init_dog.c
-> A function that initializes a variable of type struct dog.
-> - Prototype: ``` void init_dog(struct dog *d, char *name, float age, char *owner); ```.
-
-## 2-print_dog.c
-> A function  that peints a struct dog.
-> - If an element of ``` d ``` is ``` NULL ```, prints ``` (nil) ``` instead of this element. (if name is NULL, print Name: (nil)).
-> - if ``` d ``` is ``` NULL ``` nothing is printed.
-
-## 4-new_dog.c
-> A function that creates a new dog.
-> - Prototype: ``` dog_t *new_dog(char *name, float age, char *owner); ```.
-> - A copy of ``` name ``` and ``` owner ``` is stored.
-> - Returns ``` NULL ``` if function fails.
-
-## 5-free_dog.c
-> A function that frees dogs.
-> - Prototype: ``` void free_dog(dog_t *d); ```.
+In C programming, structures (structs) are a way to group related variables of different types under a single name. 
+They provide a means of packing together data of different types. 
+A struct is defined using the `struct` keyword, followed by a series of variable declarations enclosed in braces. 
+Each variable within a struct is called a member, and they can be accessed using the dot (.) operator. 
+Structs are particularly useful for creating complex data types that represent objects or concepts in the real world, such as a date structure containing day, month, and year members.
